@@ -1,116 +1,118 @@
-📊 NumPy Analyzer
+# NumPy Analyzer
 
-A menu-driven Python application built using NumPy that allows users to create, manipulate, analyze, and perform mathematical operations on 1D, 2D, and 3D NumPy arrays.
+> **A menu-driven Python CLI project for creating and analyzing 1D, 2D, and 3D NumPy arrays.**
 
-This project demonstrates the practical implementation of NumPy concepts through an interactive console-based application.
+## Description
 
-🚀 Features
-1. Create NumPy Arrays
-Create 1D arrays.
-Create 2D arrays by specifying rows and columns.
-Create 3D arrays by specifying depth, rows, and columns.
-Accept user input to populate arrays.
-2. Indexing and Slicing
-Access individual elements using indexing.
-Perform indexing on 1D, 2D, and 3D arrays.
-Extract specific portions of arrays using slicing.
-3. Mathematical Operations
+NumPy Analyzer is a beginner-friendly, command-line program built with Python and NumPy. It lets you create an integer array and then choose operations from an interactive menu. You can inspect array elements, slice arrays, perform arithmetic, combine or split arrays, search and filter values, sort data, and calculate basic statistics.
 
-Perform mathematical operations between two arrays:
+## Features
 
-Addition (+)
-Subtraction (-)
-Multiplication (*)
-Division (/)
-4. Combine and Split Arrays
-Combine arrays using NumPy's vstack() function.
-Split arrays using NumPy's array_split() function.
-5. Search, Sort, and Filter
-Search for a specific value using np.where().
-Sort array elements using np.sort().
-Filter values less than a given number.
-Filter values greater than a given number.
-6. Aggregate Operations and Statistics
+- Create 1D, 2D, and 3D integer arrays
+- Index and slice arrays
+- Add, subtract, multiply, and divide arrays of the same shape
+- Combine arrays with a vertical stack or split an array
+- Search for values, sort arrays, and filter by a threshold
+- Calculate sum, mean, and median
 
-Calculate statistical values using NumPy:
+## Requirements
 
-Sum (np.sum())
-Mean (np.mean())
-Median (np.median())
-🛠️ Technologies Used
-Python – Programming language.
-NumPy – Numerical computing library.
-OOP (Object-Oriented Programming) – Class and object-based implementation.
-Exception Handling – Handling invalid inputs and runtime errors.
-📦 Installation and Setup
-Step 1: Clone the Repository
-bash
-git clone https://github.com/your-username/numpy-analyzer.git
+- Python 3.x.x  
+- NumPy
+- VS Code Python extension (recommended)
 
-Step 2: Navigate to the Project Directory
-bash
-cd numpy-analyzer
+## Install Python and NumPy
 
-Step 3: Install NumPy
-bash
-pip install numpy
+1. Install Python 3.x or later for your operating system. On Windows, enable **Add Python to PATH** during installation if that option appears.
+2. Open PowerShell or the VS Code integrated terminal and verify Python is available:
 
-Step 4: Run the Program
-bash
-python main.py
+   ```powershell
+   py --version
+   ```
 
-💻 Application Menu
+   If the `py` command is unavailable, try `python --version`.
 
-The application provides the following menu:
+3. Open the project folder in VS Code and open **Terminal → New Terminal**.
+4. (Optional) Create and activate a virtual environment in PowerShell:
 
-text
+   ```powershell
+   py -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   ```
+
+5. Install NumPy:
+
+   ```powershell
+   py -m pip install numpy
+   ```
+
+## How to Run
+
+1. Save the program as `main.py` in your project folder.
+2. In VS Code, open **Terminal → New Terminal**.
+3. Run:
+
+   ```powershell
+   py main.py
+   ```
+
+   If `py` is unavailable, use:
+
+   ```powershell
+
+   python main.py
+
+   ```
+
+4. Choose a menu option by entering its number. Create an array before selecting operations that use the current array. For 2D and 3D arrays, enter exactly the number of integer elements requested by the program.
+
+## Project Structure
+
+```text
+ 
+├── main.py
+├── output.png      
+└── README.md   
+
+```
+
+## Sample Output
+
+```text
 =========================
-Welcome to Numpy Analyzer!
+Welcome to Numpy Analyzer !
 =========================
-
-Choose an option:
-
+Choose an choice :
 1. Create a Numpy Array
 2. Perform Mathematical Operations
-3. Combine or Split Array
-4. Search, Sort, or Filter Arrays
+3. Combine or Split Arrays
+4. Search, Sort or Filter Arrays
 5. Compute Aggregates and Statistics
 6. Exit
 
-Enter Your Choice:
+Enter Your Choice : 5
 
-📁 Project Structure
-text
-numpy-analyzer/
-│
-├── main.py
-├── README.md
-└── output.png
+Choose an option:
+1. Sum
+2. Mean
+3. Median
+Enter your choice: 1
+Sum of all elements: 48
 
-🎯 Learning Objectives
+```
 
-Through this project, I practiced:
+## Output
+![Programe](output.png)
 
-Creating and manipulating NumPy arrays.
-Understanding 1D, 2D, and 3D arrays.
-Working with array indexing and slicing.
-Performing mathematical operations on arrays.
-Combining and splitting arrays.
-Searching, sorting, and filtering data.
-Applying aggregate and statistical functions.
-Implementing Object-Oriented Programming in Python.
-Handling exceptions and user input.
-🔮 Future Improvements
-Add support for floating-point numbers.
-Implement matrix multiplication.
-Add transpose and reshape operations.
-Improve input validation and error handling.
-Add graphical user interface (GUI).
-Support saving and loading arrays from files.
+## Notes
 
-## OUTPUT
+- Array indices are zero-based, following NumPy conventions. For shape `(3, 2, 2)`, valid indices are depth `0–2`, row `0–1`, and column `0–1`.
+- When dividing, a zero in the second array can produce `nan` and a NumPy runtime warning.
+- Operations that combine arrays expect the second array to have the same number of elements and shape as the current array.
 
-![Programe Output](output.png)
-👨‍💻 Author
+## Author
 
-**Harshit**
+**Harshit**  
+ 
+
+ 
